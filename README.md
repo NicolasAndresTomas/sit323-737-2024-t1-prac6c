@@ -1,11 +1,19 @@
-Getting Started:
+# Kubernetes Deployment:
 
-Start the server by running the following command in your terminal, "node server.js"
+## To deploy this application on a Kubernetes cluster, use the provided deployment.yaml and service.yaml files
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
 
+## After applying the deployment and service, verify the application is running and accessible:
+kubectl get pods
+kubectl get service my-microservice
 
-API Endpoints:
+## You can then access the application via the external IP provided by the Kubernetes service, or use port-forwarding for local testing:
+kubectl port-forward service/my-microservice 8080:80
 
-The Calculator Microservice offers several arithmetic operations. Use the following endpoints to perform calculations:
+## Now you can access the application at http://localhost:8080
+
+# The Calculator Microservice offers several arithmetic operations. Use the following endpoints to perform calculations:
 
 Addition (/add):
 - Description: Adds two numbers.
@@ -43,7 +51,3 @@ Modulo (/modulo)
 - Description: Finds the remainder of division between two numbers.
 - Usage: /modulo?num1=10&num2=4
 - Expected Result: Result: 2
-
-Error Handling:
-
-Providing non-numeric inputs, attempting division by zero, or requesting the square root of a negative number will return an error message with a status of 400, guiding users towards valid inputs.
