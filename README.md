@@ -1,15 +1,15 @@
 # Kubernetes Deployment:
 
 ### 1. To deploy this application on a Kubernetes cluster, use the provided deployment.yaml and service.yaml files
-kubectl apply -f deployment.yaml
-kubectl apply -f service.yaml
+- kubectl apply -f deployment.yaml
+- kubectl apply -f service.yaml
 
 ### 2. After applying the deployment and service, verify the application is running and accessible:
-kubectl get pods
-kubectl get service my-microservice
+- kubectl get pods
+- kubectl get service my-microservice
 
 ### 3. You can then access the application via the external IP provided by the Kubernetes service, or use port-forwarding for local testing:
-kubectl port-forward service/my-microservice 8080:80
+- kubectl port-forward service/my-microservice 8080:80
 
 ### 4. Now you can access the application at http://localhost:8080
 
