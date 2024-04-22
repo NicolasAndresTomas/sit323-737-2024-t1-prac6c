@@ -1,6 +1,6 @@
 # Kubernetes Deployment:
 
-## To deploy this application on a Kubernetes cluster, use the provided deployment.yaml and service.yaml files
+### To deploy this application on a Kubernetes cluster, use the provided deployment.yaml and service.yaml files
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 
