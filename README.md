@@ -13,7 +13,7 @@ kubectl port-forward service/my-microservice 8080:80
 
 ### 4. Now you can access the application at http://localhost:8080
 
-# The Calculator Microservice offers several arithmetic operations. Use the following endpoints to perform calculations:
+# The Calculator Microservice offers several arithmetic operations:
 
 ### Addition (/add):
 - Description: Adds two numbers.
