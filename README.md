@@ -1,17 +1,17 @@
 # Kubernetes Deployment:
 
-### To deploy this application on a Kubernetes cluster, use the provided deployment.yaml and service.yaml files
+### 1. To deploy this application on a Kubernetes cluster, use the provided deployment.yaml and service.yaml files
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 
-### After applying the deployment and service, verify the application is running and accessible:
+### 2. After applying the deployment and service, verify the application is running and accessible:
 kubectl get pods
 kubectl get service my-microservice
 
-### You can then access the application via the external IP provided by the Kubernetes service, or use port-forwarding for local testing:
+### 3. You can then access the application via the external IP provided by the Kubernetes service, or use port-forwarding for local testing:
 kubectl port-forward service/my-microservice 8080:80
 
-### Now you can access the application at http://localhost:8080
+### 4. Now you can access the application at http://localhost:8080
 
 # The Calculator Microservice offers several arithmetic operations. Use the following endpoints to perform calculations:
 
